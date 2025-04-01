@@ -1,0 +1,769 @@
+Kolumna,Unikalne wartości,Brakujące wartości,Proporcja klas
+player_url,19239,0,"player_url
+https://sofifa.com/player/264540/emanuel-lalchhanchhuaha/220002       0.000052
+https://sofifa.com/player/158023/lionel-messi/220002                  0.000052
+https://sofifa.com/player/188545/robert-lewandowski/220002            0.000052
+https://sofifa.com/player/20801/c-ronaldo-dos-santos-aveiro/220002    0.000052
+https://sofifa.com/player/190871/neymar-da-silva-santos-jr/220002     0.000052
+                                                                        ...   
+https://sofifa.com/player/165153/karim-benzema/220002                 0.000052
+https://sofifa.com/player/215914/ngolo-kante/220002                   0.000052
+https://sofifa.com/player/202126/harry-kane/220002                    0.000052
+https://sofifa.com/player/192448/marc-andre-ter-stegen/220002         0.000052
+https://sofifa.com/player/167495/manuel-neuer/220002                  0.000052
+Name: proportion, Length: 19239, dtype: float64"
+short_name,18145,0,"short_name
+J. Rodríguez          0.000676
+J. Hernández          0.000468
+J. Brown              0.000416
+Paulinho              0.000416
+L. Rodríguez          0.000364
+                        ...   
+T. Courtois           0.000052
+H. Son                0.000052
+Casemiro              0.000052
+V. van Dijk           0.000052
+E. Lalchhanchhuaha    0.000052
+Name: proportion, Length: 18145, dtype: float64"
+long_name,19219,0,"long_name
+Ladislav Krejčí                      0.000104
+刘洋                                   0.000104
+Pablo Martinez                       0.000104
+Mamadou Fofana                       0.000104
+Ibrahima Baldé                       0.000104
+                                       ...   
+Carlos Henrique Venancio Casimiro    0.000052
+Virgil van Dijk                      0.000052
+Sadio Mané                           0.000052
+Mohamed Salah Ghaly                  0.000052
+Neymar da Silva Santos Júnior        0.000052
+Name: proportion, Length: 19219, dtype: float64"
+player_positions,674,0,"player_positions
+CB             0.125942
+GK             0.110817
+ST             0.092001
+CDM, CM        0.049535
+CM             0.037736
+                 ...   
+CAM, LW, LB    0.000052
+RWB, CDM       0.000052
+LWB, CAM       0.000052
+RB, CAM        0.000052
+LM, LW, LB     0.000052
+Name: proportion, Length: 674, dtype: float64"
+dob,6312,0,"dob
+1992-02-29    0.006497
+1996-02-29    0.006237
+2000-02-29    0.004782
+1988-02-29    0.001767
+1999-02-25    0.000676
+                ...   
+2004-01-20    0.000052
+2000-05-12    0.000052
+2003-06-08    0.000052
+2003-08-16    0.000052
+2003-11-09    0.000052
+Name: proportion, Length: 6312, dtype: float64"
+club_name,701,61,"club_name
+Real Betis Balompié                  0.001721
+Everton                              0.001721
+Borussia Mönchengladbach             0.001721
+Arsenal                              0.001721
+RC Celta de Vigo                     0.001721
+                                       ...   
+Clube Atlético Mineiro               0.001043
+Associação Chapecoense de Futebol    0.001043
+América de Cali                      0.001043
+Harrogate Town                       0.000991
+Wellington Phoenix                   0.000991
+Name: proportion, Length: 701, dtype: float64"
+league_name,55,61,"league_name
+USA Major League Soccer                 0.040202
+Argentina Primera División              0.037908
+English League Championship             0.037387
+English Premier League                  0.033997
+Spain Primera Division                  0.033007
+English League One                      0.032642
+Spanish Segunda División                0.032589
+English League Two                      0.031964
+Japanese J. League Division 1           0.030712
+French Ligue 1                          0.030087
+Italian Serie A                         0.029357
+German 1. Bundesliga                    0.028731
+Turkish Süper Lig                       0.028314
+German 3. Bundesliga                    0.028262
+French Ligue 2                          0.027584
+German 2. Bundesliga                    0.026593
+Portuguese Liga ZON SAGRES              0.026332
+Polish T-Mobile Ekstraklasa             0.025863
+Holland Eredivisie                      0.025654
+Mexican Liga MX                         0.025446
+Belgian Jupiler Pro League              0.025446
+Saudi Abdul L. Jameel League            0.024403
+Chinese Super League                    0.023256
+Romanian Liga I                         0.023047
+Norwegian Eliteserien                   0.020909
+Swedish Allsvenskan                     0.020492
+Campeonato Brasileiro Série A           0.018772
+Korean K League 1                       0.017520
+Austrian Football Bundesliga            0.017207
+Scottish Premiership                    0.016686
+Danish Superliga                        0.016581
+Indian Super League                     0.014548
+Australian Hyundai A-League             0.014444
+Swiss Super League                      0.014079
+Rep. Ireland Airtricity League          0.013453
+Colombian Liga Postobón                 0.009959
+Liga de Fútbol Profesional Boliviano    0.009751
+Paraguayan Primera División             0.009073
+Ecuadorian Serie A                      0.008916
+Peruvian Primera División               0.008499
+Venezuelan Primera División             0.008395
+Chilian Campeonato Nacional             0.008082
+Uruguayan Primera División              0.006883
+Italian Serie B                         0.006883
+Greek Super League                      0.005840
+Russian Premier League                  0.004276
+Czech Republic Gambrinus Liga           0.004119
+Ukrainian Premier League                0.002920
+Croatian Prva HNL                       0.002920
+South African Premier Division          0.002920
+UAE Arabian Gulf League                 0.001460
+Hungarian Nemzeti Bajnokság I           0.001460
+Cypriot First Division                  0.001460
+English National League                 0.001408
+Finnish Veikkausliiga                   0.001304
+Name: proportion, dtype: float64"
+club_position,29,61,"club_position
+SUB    0.432735
+RES    0.165189
+LCB    0.036552
+RCB    0.036552
+GK     0.036552
+LB     0.026854
+RB     0.026854
+ST     0.024820
+RCM    0.024507
+LCM    0.024507
+RM     0.021379
+LM     0.021379
+CAM    0.015226
+RS     0.011628
+RDM    0.011628
+LS     0.011628
+LDM    0.011628
+CB     0.009699
+LW     0.009646
+RW     0.009646
+CDM    0.008760
+LWB    0.006049
+RWB    0.006049
+CM     0.004328
+RF     0.001825
+LF     0.001825
+LAM    0.001095
+RAM    0.001095
+CF     0.000365
+Name: proportion, dtype: float64"
+club_loaned_from,334,18137,"club_loaned_from
+Sporting CP             0.012704
+Atalanta                0.012704
+Manchester City         0.011797
+Juventus                0.011797
+Atlético de Madrid      0.011797
+                          ...   
+FC Goa                  0.000907
+Al Taawoun              0.000907
+Ettifaq FC              0.000907
+Charlton Athletic       0.000907
+Sporting Kansas City    0.000907
+Name: proportion, Length: 334, dtype: float64"
+club_joined,1845,1163,"club_joined
+2021-07-01    0.070701
+2019-07-01    0.044645
+2018-07-01    0.025337
+2020-07-01    0.023235
+2017-07-01    0.016431
+                ...   
+2019-10-26    0.000055
+2018-04-02    0.000055
+2021-05-14    0.000055
+2019-11-04    0.000055
+2019-04-03    0.000055
+Name: proportion, Length: 1845, dtype: float64"
+nationality_name,163,0,"nationality_name
+England      0.089350
+Germany      0.063101
+Spain        0.056448
+France       0.050938
+Argentina    0.049899
+               ...   
+Bhutan       0.000052
+Gibraltar    0.000052
+Barbados     0.000052
+Estonia      0.000052
+Indonesia    0.000052
+Name: proportion, Length: 163, dtype: float64"
+nation_position,28,18480,"nation_position
+SUB    0.521739
+GK     0.043478
+LCB    0.043478
+RCB    0.043478
+LB     0.035573
+RB     0.035573
+ST     0.032938
+RCM    0.031621
+LCM    0.031621
+CDM    0.021080
+LW     0.019763
+RW     0.019763
+LM     0.019763
+RM     0.019763
+CAM    0.013175
+RDM    0.011858
+LDM    0.011858
+RS     0.009223
+LS     0.009223
+CB     0.007905
+LWB    0.003953
+RWB    0.003953
+CM     0.002635
+CF     0.001318
+LF     0.001318
+RF     0.001318
+LAM    0.001318
+RAM    0.001318
+Name: proportion, dtype: float64"
+preferred_foot,2,0,"preferred_foot
+Right    0.762722
+Left     0.237278
+Name: proportion, dtype: float64"
+work_rate,9,0,"work_rate
+Medium/Medium    0.520557
+High/Medium      0.190291
+Medium/High      0.097718
+High/High        0.057124
+Medium/Low       0.042102
+High/Low         0.041998
+Low/Medium       0.024222
+Low/High         0.023650
+Low/Low          0.002339
+Name: proportion, dtype: float64"
+body_type,10,0,"body_type
+Normal (170-185)    0.347471
+Normal (185+)       0.220178
+Lean (170-185)      0.212381
+Lean (185+)         0.100733
+Normal (170-)       0.034773
+Stocky (170-185)    0.029108
+Lean (170-)         0.024793
+Stocky (185+)       0.018452
+Unique              0.007069
+Stocky (170-)       0.005042
+Name: proportion, dtype: float64"
+real_face,2,0,"real_face
+No     0.884609
+Yes    0.115391
+Name: proportion, dtype: float64"
+player_tags,71,17798,"player_tags
+#Strength                                                 0.342817
+#Acrobat                                                  0.163081
+#Engine                                                   0.140874
+#Speedster                                                0.101319
+#Aerial Threat, #Strength                                 0.040250
+                                                            ...   
+#Strength, #Clinical Finisher, #Complete Forward          0.000694
+#Crosser, #FK Specialist                                  0.000694
+#Dribbler, #Distance Shooter, #Crosser, #FK Specialist    0.000694
+#Speedster, #Engine, #Acrobat                             0.000694
+#Aerial Threat, #Clinical Finisher, #Complete Forward     0.000694
+Name: proportion, Length: 71, dtype: float64"
+player_traits,1051,9841,"player_traits
+Speed Dribbler (AI)                                                     0.075654
+Injury Prone                                                            0.047776
+Technical Dribbler (AI)                                                 0.046393
+Dives Into Tackles (AI)                                                 0.038732
+Power Header                                                            0.038412
+                                                                          ...   
+Long Throw-in, Dives Into Tackles (AI), Leadership, Early Crosser       0.000106
+Injury Prone, Long Passer (AI), Long Shot Taker (AI), Playmaker (AI)    0.000106
+Solid Player, Dives Into Tackles (AI), Team Player                      0.000106
+Power Free-Kick, Long Shot Taker (AI), Chip Shot (AI)                   0.000106
+Flair, Team Player, Chip Shot (AI)                                      0.000106
+Name: proportion, Length: 1051, dtype: float64"
+ls,228,0,"ls
+60+2    0.038100
+61+2    0.036904
+57+2    0.035709
+58+2    0.035657
+59+2    0.035293
+          ...   
+54      0.000052
+52      0.000052
+50+1    0.000052
+53-2    0.000052
+49      0.000052
+Name: proportion, Length: 228, dtype: float64"
+st,228,0,"st
+60+2    0.038100
+61+2    0.036904
+57+2    0.035709
+58+2    0.035657
+59+2    0.035293
+          ...   
+54      0.000052
+52      0.000052
+50+1    0.000052
+53-2    0.000052
+49      0.000052
+Name: proportion, Length: 228, dtype: float64"
+rs,228,0,"rs
+60+2    0.038100
+61+2    0.036904
+57+2    0.035709
+58+2    0.035657
+59+2    0.035293
+          ...   
+54      0.000052
+52      0.000052
+50+1    0.000052
+53-2    0.000052
+49      0.000052
+Name: proportion, Length: 228, dtype: float64"
+lw,138,0,"lw
+60      0.040179
+62      0.040127
+64      0.040023
+61      0.039971
+63      0.039711
+          ...   
+58-1    0.000052
+58-2    0.000052
+60-3    0.000052
+56-1    0.000052
+52-1    0.000052
+Name: proportion, Length: 138, dtype: float64"
+lf,132,0,"lf
+63      0.042778
+60      0.040803
+61      0.039919
+62      0.038308
+64      0.036800
+          ...   
+59-2    0.000052
+60-3    0.000052
+56-1    0.000052
+15      0.000052
+52-1    0.000052
+Name: proportion, Length: 132, dtype: float64"
+cf,132,0,"cf
+63      0.042778
+60      0.040803
+61      0.039919
+62      0.038308
+64      0.036800
+          ...   
+59-2    0.000052
+60-3    0.000052
+56-1    0.000052
+15      0.000052
+52-1    0.000052
+Name: proportion, Length: 132, dtype: float64"
+rf,132,0,"rf
+63      0.042778
+60      0.040803
+61      0.039919
+62      0.038308
+64      0.036800
+          ...   
+59-2    0.000052
+60-3    0.000052
+56-1    0.000052
+15      0.000052
+52-1    0.000052
+Name: proportion, Length: 132, dtype: float64"
+rw,138,0,"rw
+60      0.040179
+62      0.040127
+64      0.040023
+61      0.039971
+63      0.039711
+          ...   
+58-1    0.000052
+58-2    0.000052
+60-3    0.000052
+56-1    0.000052
+52-1    0.000052
+Name: proportion, Length: 138, dtype: float64"
+lam,252,0,"lam
+62+2    0.041166
+61+2    0.038464
+63+2    0.037268
+60+2    0.037164
+59+2    0.035917
+          ...   
+54      0.000052
+53+1    0.000052
+55-1    0.000052
+51      0.000052
+48+1    0.000052
+Name: proportion, Length: 252, dtype: float64"
+cam,252,0,"cam
+62+2    0.041166
+61+2    0.038464
+63+2    0.037268
+60+2    0.037164
+59+2    0.035917
+          ...   
+54      0.000052
+53+1    0.000052
+55-1    0.000052
+51      0.000052
+48+1    0.000052
+Name: proportion, Length: 252, dtype: float64"
+ram,252,0,"ram
+62+2    0.041166
+61+2    0.038464
+63+2    0.037268
+60+2    0.037164
+59+2    0.035917
+          ...   
+54      0.000052
+53+1    0.000052
+55-1    0.000052
+51      0.000052
+48+1    0.000052
+Name: proportion, Length: 252, dtype: float64"
+lm,235,0,"lm
+61+2    0.040335
+62+2    0.038723
+59+2    0.038412
+60+2    0.036956
+63+2    0.036644
+          ...   
+58-2    0.000052
+57-1    0.000052
+55      0.000052
+15+2    0.000052
+49+1    0.000052
+Name: proportion, Length: 235, dtype: float64"
+lcm,212,0,"lcm
+58+2    0.041738
+59+2    0.040543
+61+2    0.040543
+60+2    0.039815
+56+2    0.037476
+          ...   
+59-2    0.000052
+55      0.000052
+54+1    0.000052
+53      0.000052
+49      0.000052
+Name: proportion, Length: 212, dtype: float64"
+cm,212,0,"cm
+58+2    0.041738
+59+2    0.040543
+61+2    0.040543
+60+2    0.039815
+56+2    0.037476
+          ...   
+59-2    0.000052
+55      0.000052
+54+1    0.000052
+53      0.000052
+49      0.000052
+Name: proportion, Length: 212, dtype: float64"
+rcm,212,0,"rcm
+58+2    0.041738
+59+2    0.040543
+61+2    0.040543
+60+2    0.039815
+56+2    0.037476
+          ...   
+59-2    0.000052
+55      0.000052
+54+1    0.000052
+53      0.000052
+49      0.000052
+Name: proportion, Length: 212, dtype: float64"
+rm,235,0,"rm
+61+2    0.040335
+62+2    0.038723
+59+2    0.038412
+60+2    0.036956
+63+2    0.036644
+          ...   
+58-2    0.000052
+57-1    0.000052
+55      0.000052
+15+2    0.000052
+49+1    0.000052
+Name: proportion, Length: 235, dtype: float64"
+lwb,196,0,"lwb
+61+2    0.038983
+58+2    0.038464
+59+2    0.038308
+60+2    0.037424
+57+2    0.037112
+          ...   
+56      0.000052
+57-2    0.000052
+55-1    0.000052
+53      0.000052
+49+1    0.000052
+Name: proportion, Length: 196, dtype: float64"
+ldm,239,0,"ldm
+61+2    0.035241
+60+2    0.034253
+59+2    0.033422
+63+2    0.031447
+58+2    0.030771
+          ...   
+54-1    0.000052
+52+1    0.000052
+50+1    0.000052
+50      0.000052
+50-1    0.000052
+Name: proportion, Length: 239, dtype: float64"
+cdm,239,0,"cdm
+61+2    0.035241
+60+2    0.034253
+59+2    0.033422
+63+2    0.031447
+58+2    0.030771
+          ...   
+54-1    0.000052
+52+1    0.000052
+50+1    0.000052
+50      0.000052
+50-1    0.000052
+Name: proportion, Length: 239, dtype: float64"
+rdm,239,0,"rdm
+61+2    0.035241
+60+2    0.034253
+59+2    0.033422
+63+2    0.031447
+58+2    0.030771
+          ...   
+54-1    0.000052
+52+1    0.000052
+50+1    0.000052
+50      0.000052
+50-1    0.000052
+Name: proportion, Length: 239, dtype: float64"
+rwb,196,0,"rwb
+61+2    0.038983
+58+2    0.038464
+59+2    0.038308
+60+2    0.037424
+57+2    0.037112
+          ...   
+56      0.000052
+57-2    0.000052
+55-1    0.000052
+53      0.000052
+49+1    0.000052
+Name: proportion, Length: 196, dtype: float64"
+lb,193,0,"lb
+62+2    0.039867
+61+2    0.039243
+60+2    0.038931
+63+2    0.036177
+64+2    0.034305
+          ...   
+55-1    0.000052
+53      0.000052
+14+2    0.000052
+50+1    0.000052
+49+1    0.000052
+Name: proportion, Length: 193, dtype: float64"
+lcb,259,0,"lcb
+64+2    0.028068
+62+2    0.027600
+61+2    0.027548
+60+2    0.026924
+58+2    0.026561
+          ...   
+59-2    0.000052
+59-1    0.000052
+51      0.000052
+50      0.000052
+50-1    0.000052
+Name: proportion, Length: 259, dtype: float64"
+cb,259,0,"cb
+64+2    0.028068
+62+2    0.027600
+61+2    0.027548
+60+2    0.026924
+58+2    0.026561
+          ...   
+59-2    0.000052
+59-1    0.000052
+51      0.000052
+50      0.000052
+50-1    0.000052
+Name: proportion, Length: 259, dtype: float64"
+rcb,259,0,"rcb
+64+2    0.028068
+62+2    0.027600
+61+2    0.027548
+60+2    0.026924
+58+2    0.026561
+          ...   
+59-2    0.000052
+59-1    0.000052
+51      0.000052
+50      0.000052
+50-1    0.000052
+Name: proportion, Length: 259, dtype: float64"
+rb,193,0,"rb
+62+2    0.039867
+61+2    0.039243
+60+2    0.038931
+63+2    0.036177
+64+2    0.034305
+          ...   
+55-1    0.000052
+53      0.000052
+14+2    0.000052
+50+1    0.000052
+49+1    0.000052
+Name: proportion, Length: 193, dtype: float64"
+gk,115,0,"gk
+16+2    0.200166
+15+2    0.169136
+17+2    0.165185
+14+2    0.107022
+18+2    0.104735
+          ...   
+26+2    0.000052
+9+3     0.000052
+53+1    0.000052
+25+2    0.000052
+50+1    0.000052
+Name: proportion, Length: 115, dtype: float64"
+player_face_url,19239,0,"player_face_url
+https://cdn.sofifa.net/players/264/540/22_120.png    0.000052
+https://cdn.sofifa.net/players/158/023/22_120.png    0.000052
+https://cdn.sofifa.net/players/188/545/22_120.png    0.000052
+https://cdn.sofifa.net/players/020/801/22_120.png    0.000052
+https://cdn.sofifa.net/players/190/871/22_120.png    0.000052
+                                                       ...   
+https://cdn.sofifa.net/players/165/153/22_120.png    0.000052
+https://cdn.sofifa.net/players/215/914/22_120.png    0.000052
+https://cdn.sofifa.net/players/202/126/22_120.png    0.000052
+https://cdn.sofifa.net/players/192/448/22_120.png    0.000052
+https://cdn.sofifa.net/players/167/495/22_120.png    0.000052
+Name: proportion, Length: 19239, dtype: float64"
+club_logo_url,701,61,"club_logo_url
+https://cdn.sofifa.net/teams/449/60.png       0.001721
+https://cdn.sofifa.net/teams/7/60.png         0.001721
+https://cdn.sofifa.net/teams/23/60.png        0.001721
+https://cdn.sofifa.net/teams/1/60.png         0.001721
+https://cdn.sofifa.net/teams/450/60.png       0.001721
+                                                ...   
+https://cdn.sofifa.net/teams/1035/60.png      0.001043
+https://cdn.sofifa.net/teams/112476/60.png    0.001043
+https://cdn.sofifa.net/teams/101099/60.png    0.001043
+https://cdn.sofifa.net/teams/112222/60.png    0.000991
+https://cdn.sofifa.net/teams/111766/60.png    0.000991
+Name: proportion, Length: 701, dtype: float64"
+club_flag_url,49,61,"club_flag_url
+https://cdn.sofifa.net/flags/gb-eng.png    0.135989
+https://cdn.sofifa.net/flags/de.png        0.083585
+https://cdn.sofifa.net/flags/es.png        0.065596
+https://cdn.sofifa.net/flags/fr.png        0.057670
+https://cdn.sofifa.net/flags/us.png        0.038638
+https://cdn.sofifa.net/flags/ar.png        0.037908
+https://cdn.sofifa.net/flags/it.png        0.036239
+https://cdn.sofifa.net/flags/jp.png        0.030712
+https://cdn.sofifa.net/flags/tr.png        0.028314
+https://cdn.sofifa.net/flags/pt.png        0.026332
+https://cdn.sofifa.net/flags/pl.png        0.025863
+https://cdn.sofifa.net/flags/nl.png        0.025654
+https://cdn.sofifa.net/flags/mx.png        0.025446
+https://cdn.sofifa.net/flags/be.png        0.025446
+https://cdn.sofifa.net/flags/sa.png        0.024403
+https://cdn.sofifa.net/flags/cn.png        0.023256
+https://cdn.sofifa.net/flags/ro.png        0.023047
+https://cdn.sofifa.net/flags/no.png        0.020909
+https://cdn.sofifa.net/flags/se.png        0.020492
+https://cdn.sofifa.net/flags/br.png        0.018772
+https://cdn.sofifa.net/flags/kr.png        0.017520
+https://cdn.sofifa.net/flags/at.png        0.017207
+https://cdn.sofifa.net/flags/gb-sct.png    0.016686
+https://cdn.sofifa.net/flags/dk.png        0.016581
+https://cdn.sofifa.net/flags/in.png        0.014548
+https://cdn.sofifa.net/flags/ch.png        0.014079
+https://cdn.sofifa.net/flags/au.png        0.013453
+https://cdn.sofifa.net/flags/ie.png        0.013453
+https://cdn.sofifa.net/flags/co.png        0.009959
+https://cdn.sofifa.net/flags/bo.png        0.009751
+https://cdn.sofifa.net/flags/py.png        0.009073
+https://cdn.sofifa.net/flags/ec.png        0.008916
+https://cdn.sofifa.net/flags/pe.png        0.008499
+https://cdn.sofifa.net/flags/ve.png        0.008395
+https://cdn.sofifa.net/flags/cl.png        0.008082
+https://cdn.sofifa.net/flags/uy.png        0.006883
+https://cdn.sofifa.net/flags/gr.png        0.005840
+https://cdn.sofifa.net/flags/ru.png        0.004276
+https://cdn.sofifa.net/flags/cz.png        0.004119
+https://cdn.sofifa.net/flags/ua.png        0.002920
+https://cdn.sofifa.net/flags/hr.png        0.002920
+https://cdn.sofifa.net/flags/za.png        0.002920
+https://cdn.sofifa.net/flags/ca.png        0.001564
+https://cdn.sofifa.net/flags/ae.png        0.001460
+https://cdn.sofifa.net/flags/hu.png        0.001460
+https://cdn.sofifa.net/flags/cy.png        0.001460
+https://cdn.sofifa.net/flags/gb-wls.png    0.001408
+https://cdn.sofifa.net/flags/fi.png        0.001304
+https://cdn.sofifa.net/flags/nz.png        0.000991
+Name: proportion, dtype: float64"
+nation_logo_url,33,18480,"nation_logo_url
+https://cdn.sofifa.net/teams/1369/60.png      0.030303
+https://cdn.sofifa.net/teams/1353/60.png      0.030303
+https://cdn.sofifa.net/teams/1354/60.png      0.030303
+https://cdn.sofifa.net/teams/1325/60.png      0.030303
+https://cdn.sofifa.net/teams/1335/60.png      0.030303
+https://cdn.sofifa.net/teams/1337/60.png      0.030303
+https://cdn.sofifa.net/teams/1318/60.png      0.030303
+https://cdn.sofifa.net/teams/105035/60.png    0.030303
+https://cdn.sofifa.net/teams/1343/60.png      0.030303
+https://cdn.sofifa.net/teams/1362/60.png      0.030303
+https://cdn.sofifa.net/teams/1352/60.png      0.030303
+https://cdn.sofifa.net/teams/1359/60.png      0.030303
+https://cdn.sofifa.net/teams/1331/60.png      0.030303
+https://cdn.sofifa.net/teams/1886/60.png      0.030303
+https://cdn.sofifa.net/teams/1363/60.png      0.030303
+https://cdn.sofifa.net/teams/1322/60.png      0.030303
+https://cdn.sofifa.net/teams/1334/60.png      0.030303
+https://cdn.sofifa.net/teams/1386/60.png      0.030303
+https://cdn.sofifa.net/teams/1370/60.png      0.030303
+https://cdn.sofifa.net/teams/1367/60.png      0.030303
+https://cdn.sofifa.net/teams/1387/60.png      0.030303
+https://cdn.sofifa.net/teams/111455/60.png    0.030303
+https://cdn.sofifa.net/teams/1330/60.png      0.030303
+https://cdn.sofifa.net/teams/1366/60.png      0.030303
+https://cdn.sofifa.net/teams/1338/60.png      0.030303
+https://cdn.sofifa.net/teams/110081/60.png    0.030303
+https://cdn.sofifa.net/teams/1341/60.png      0.030303
+https://cdn.sofifa.net/teams/111473/60.png    0.030303
+https://cdn.sofifa.net/teams/1413/60.png      0.030303
+https://cdn.sofifa.net/teams/1357/60.png      0.030303
+https://cdn.sofifa.net/teams/1355/60.png      0.030303
+https://cdn.sofifa.net/teams/1356/60.png      0.030303
+https://cdn.sofifa.net/teams/1415/60.png      0.030303
+Name: proportion, dtype: float64"
+nation_flag_url,163,0,"nation_flag_url
+https://cdn.sofifa.net/flags/gb-eng.png    0.089350
+https://cdn.sofifa.net/flags/de.png        0.063101
+https://cdn.sofifa.net/flags/es.png        0.056448
+https://cdn.sofifa.net/flags/fr.png        0.050938
+https://cdn.sofifa.net/flags/ar.png        0.049899
+                                             ...   
+https://cdn.sofifa.net/flags/bt.png        0.000052
+https://cdn.sofifa.net/flags/gi.png        0.000052
+https://cdn.sofifa.net/flags/bb.png        0.000052
+https://cdn.sofifa.net/flags/ee.png        0.000052
+https://cdn.sofifa.net/flags/id.png        0.000052
+Name: proportion, Length: 163, dtype: float64"
