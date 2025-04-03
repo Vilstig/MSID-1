@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
-from numpy.version import release
+from sklearn.manifold import TSNE
+from sklearn.preprocessing import StandardScaler
 
 top_5_leagues = ["English Premier League", "Spain Primera Division", "Italian Serie A", "German 1. Bundesliga",
                  "French Ligue 1"]
@@ -248,3 +249,45 @@ def create_linear_regression_plot_overall_range(df, x_col, y_col, overall, over_
 
 
     create_linear_regression_plot(df_filtered, x_col, y_col)
+
+
+def create_tsne_plot(df):
+    """
+    Funkcja generująca wykres t-SNE dla graczy w zależności od ich atrybutów.
+    Grupy pozycji są rozróżniane kolorami.
+    """
+    # Filtrujemy zawodników z oceną między 70 a 80
+    df_filtered = df[(df["overall"] >= 70) & (df["overall"] <= 80)]
+
+    # Usuwamy zawodników, którzy mają NaN w atrybutach
+    df_filtered = df_filtered.dropna(subset=player_attributes)
+
+    # Sprawdzamy, czy skill_moves ma wartość 1 i traktujemy to jako przypadek z brakującymi danymi
+    df_filtered = df_filtered[df_filtered["skill_moves"] != 1]
+
+    # Standaryzacja danych przed t-SNE
+    scaler = StandardScaler()
+    df_scaled = scaler.fit_transform(df_filtered[player_attributes])
+    print(2)
+    # Redukcja wymiarowości z użyciem t-SNE
+    tsne = TSNE(n_components=2, random_state=42, perplexity=50)
+    tsne_results = tsne.fit_transform(df_scaled)
+    print(3)
+    # Dodajemy wyniki t-SNE do DataFrame
+    df_filtered["t-SNE_1"] = tsne_results[:, 0]
+    df_filtered["t-SNE_2"] = tsne_results[:, 1]
+    print(4)
+    # Tworzymy wykres t-SNE z kolorowaniem według pozycji
+    plt.figure(figsize=(10, 8))
+    sns.scatterplot(x="t-SNE_1", y="t-SNE_2", hue="Position_Group", data=df_filtered, palette="Set1", s=60, alpha=0.7)
+
+    plt.title("Wizualizacja t-SNE atrybutów piłkarzy (70-80 overall)", fontsize=14, fontweight="bold")
+    plt.xlabel("t-SNE 1", fontsize=12, fontweight="bold")
+    plt.ylabel("t-SNE 2", fontsize=12, fontweight="bold")
+    plt.legend(title="Pozycja", bbox_to_anchor=(1.05, 1), loc='upper left')
+
+    # Zapisujemy wykres
+    plt.savefig("charts/tsne/tsne_plot.png", bbox_inches="tight")
+    plt.close()
+
+    print("Zapisano wykres t-SNE atrybutów piłkarzy.")

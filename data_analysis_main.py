@@ -15,7 +15,7 @@ def age_filter(df):
 
 def setup_directories():
     main_dir = "charts"
-    sub_dirs = ["boxplots", "error_bars", "heatmaps", "histograms", "regression", "violinplots"]
+    sub_dirs = ["boxplots", "error_bars", "heatmaps", "histograms", "regression", "violinplots", "tsne"]
 
     os.makedirs(main_dir, exist_ok=True)
 
@@ -77,6 +77,8 @@ def main():
     charts.create_linear_regression_plot_release_clause(data, "age", 78)
 
     charts.create_regression_plot_potential_vs_overall(data)
+
+    charts.create_tsne_plot(data)
 
 
 if __name__ == "__main__":
