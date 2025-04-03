@@ -18,7 +18,7 @@ position_mapping = {
 
 player_attributes = ["pace", "shooting", "passing", "dribbling", "defending", "physic"]
 
-player_full_attributes = ["overall", "potential", "wage_eur", "age", "height_cm", "weight_kg", "pace", "shooting", "passing", "dribbling", "defending", "physic"]
+player_full_attributes = ["overall", "potential", "value_eur", "wage_eur", "age", "height_cm", "weight_kg", "pace", "shooting", "passing", "dribbling", "defending", "physic"]
 
 def create_boxplots(df, columns):
     for col in columns:
@@ -67,25 +67,33 @@ def create_violinplots(df, columns):
 
 def create_error_bars(df):
     plt.figure(figsize=(8, 6))
-    sns.pointplot(x="skill_moves", y="dribbling", data=df, errorbar="sd")
+    sns.pointplot(x="skill_moves", y="dribbling", data=df, errorbar="sd", capsize=0.1)
     plt.title("Średnia dribbling względem skill moves")
     plt.savefig("charts/error_bars/errorbars_dribbling_skill_moves.png")
     plt.close()
 
-    df["Position_Group"] = df["club_position"].map(position_mapping)
+    position_mapping_attackers = {
+        "LW": "Attacker", "RW": "Attacker", "ST": "Attacker",
+        "LS": "Attacker", "RS": "Attacker", "CF": "Attacker",
+        "LF": "Attacker", "RF": "Attacker"
+    }
+
+    df["Position_Group"] = df["club_position"].map(position_mapping_attackers)
     df_filtered = df.dropna(subset=["Position_Group"])
 
-    plt.figure(figsize=(8, 9))
-    sns.pointplot(x="Position_Group", y="shooting", data=df, errorbar="sd")
-    plt.title("Średnia shooting dla różnych grup pozycji")
-    plt.savefig("charts/error_bars/errorbars_shooting_position.png")
+    df_filtered = df_filtered[(df_filtered["overall"] >=  70) & (df_filtered["overall"] <= 80)]
+
+    df_melted = df_filtered.melt(id_vars=["Position_Group"], value_vars=player_attributes,
+                                 var_name="Attribute", value_name="Value")
+
+    plt.figure(figsize=(12, 8))
+    sns.pointplot(x="Attribute", y="Value", data=df_melted, errorbar="sd", capsize=0.1)
+
+    plt.title("Error Bars for Attacker Attributes (70-80 overall)")
+    plt.xticks(rotation=45)
+    plt.savefig("charts/error_bars/errorbars_attackers_attributes.png")
     plt.close()
 
-    plt.figure(figsize=(8, 6))
-    sns.pointplot(x="Position_Group", y="mentality_aggression", data=df_filtered, errorbar="sd")
-    plt.title("Mentality Aggression dla różnych grup pozycji")
-    plt.savefig("charts/error_bars/errorbars_mentality_aggression_position.png")
-    plt.close()
 
 
 def create_histograms(df, columns):
@@ -173,6 +181,10 @@ def prepare_data_for_regression(df, x_col, y_col, filter_column=None, threshold=
         df_filtered["release_clause_log"] = df_filtered[y_col].apply(lambda x: np.log1p(x))
         y_col = "release_clause_log"
 
+    if y_col == "value_eur":
+        df_filtered["value_eur"] = df_filtered[y_col].apply(lambda x: np.log1p(x))
+        y_col = "value_eur"
+
     if x_col == "age":
         df_filtered = df_filtered[df_filtered[x_col] <= 45]
 
@@ -181,7 +193,7 @@ def prepare_data_for_regression(df, x_col, y_col, filter_column=None, threshold=
 
 def create_linear_regression_plot(df, x_col, y_col):
     plt.figure(figsize=(8, 6))
-    sns.regplot(x=df[x_col], y=df[y_col], scatter_kws={'alpha': 0.5}, line_kws={"color": "red"})
+    sns.regplot(x=df[x_col], y=df[y_col], scatter_kws={'alpha': 0.5, 's': 20}, line_kws={"color": "red"})
 
     plt.xlabel(x_col, fontsize=12, fontweight="bold")
     plt.ylabel(y_col, fontsize=12, fontweight="bold")
@@ -199,7 +211,40 @@ def create_linear_regression_plot_release_clause(df, x_col, overall=75):
 
     create_linear_regression_plot(df_filtered, x_col, y_col)
 
+def create_linear_regression_plot_value(df, x_col):
+    df_filtered, y_col = prepare_data_for_regression(df, x_col, "value_eur")
+
+    create_linear_regression_plot(df_filtered, x_col, y_col)
+
 def create_linear_regression_plot_overall_threshold(df, x_col, y_col, overall):
     df_filtered, y_col = prepare_data_for_regression(df, x_col, y_col, filter_column="overall", threshold=overall)
+
+    create_linear_regression_plot(df_filtered, x_col, y_col)
+
+
+def create_regression_plot_potential_vs_overall(df):
+    # Compute the difference between potential and overall
+    df["potential_gap"] = df["potential"] - df["overall"]
+    df_filtered = df[df["age"] < 30]
+
+    # Create the regression plot
+    plt.figure(figsize=(8, 6))
+    sns.regplot(x=df_filtered["age"], y=df_filtered["potential_gap"], scatter_kws={'alpha': 0.5}, line_kws={"color": "red"})
+
+    # Labels and title
+    plt.xlabel("Age", fontsize=12, fontweight="bold")
+    plt.ylabel("Potential - Overall", fontsize=12, fontweight="bold")
+    plt.title("Regression: Potential vs Age", fontsize=14, fontweight="bold")
+
+    # Save the plot
+    plt.savefig("charts/regression/regplot_potential_gap_vs_age.png")
+    plt.close()
+
+    print("Zapisano wykres regresji dla różnicy potencjału i overalla względem wieku.")
+
+
+def create_linear_regression_plot_overall_range(df, x_col, y_col, overall, over_range):
+    df_filtered = df[(df["overall"] >= overall - over_range) & (df["overall"] <= overall + over_range)]
+
 
     create_linear_regression_plot(df_filtered, x_col, y_col)
