@@ -1,13 +1,9 @@
 import os
 
-import pandas as pd
-
 from basic_statistics import numerical_statistics, categorical_statistics
 import charts
+from utils import read_data
 
-
-def read_data(file_path):
-    return pd.read_csv(file_path, low_memory=False)
 
 def age_filter(df):
     df_filtered = df[df['age'] <= 45]
@@ -24,7 +20,6 @@ def setup_directories():
 
     print("Directories created successfully!")
 
-# noinspection PyPackageRequirements
 def main():
     file = "players_22.csv"
     data = read_data(file)

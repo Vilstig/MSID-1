@@ -21,7 +21,6 @@ kiwisolver==1.4.8
 lxml==5.3.1
 matplotlib==3.10.1
 matplotlib-inline==0.1.7
-meteostat==1.6.8
 nest-asyncio==1.6.0
 numpy==2.2.4
 packaging==24.2
@@ -52,3 +51,4 @@ traitlets==5.14.3
 tzdata==2025.2
 urllib3==2.3.0
 wcwidth==0.2.13
+torch~=2.7.0+cu128
