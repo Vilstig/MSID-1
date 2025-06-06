@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
-from utils import read_data
+from util import read_data
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Używane urządzenie:", device)
@@ -71,7 +71,7 @@ class NeuralNetworkModel(nn.Module):
 # Model NN, loss i optymalizator
 model = NeuralNetworkModel(input_dim=X_train.shape[1]).to(device)
 criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.02)
+optimizer = optim.Adam(model.parameters(), lr=0.01)
 
 # Model LR, loss i optymalizator
 '''model = LinearRegressionModel(input_dim=X_train.shape[1]).to(device)
@@ -80,7 +80,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.01)'''
 
 # Trening
 start = time.time()
-epochs = 2000
+epochs = 3000
 for epoch in range(epochs):
     model.train()
     optimizer.zero_grad()

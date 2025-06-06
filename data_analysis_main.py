@@ -2,7 +2,7 @@ import os
 
 from basic_statistics import numerical_statistics, categorical_statistics
 import charts
-from utils import read_data
+from util import read_data
 
 
 def age_filter(df):
